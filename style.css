@@ -1,0 +1,49 @@
+:root{
+    --purple: #5f2c91;
+    --orange: #fa8c65; /*var(--orange)*/
+}
+html{
+    width: 100%;
+    background-color : var(--orange);
+}
+
+body{
+    width:80%;
+    margin: auto;
+}
+
+.top-image {
+    margin: auto;
+    text-align: center;
+}
+
+.top-image img {
+    max-width : 400px;
+}
+
+
+
+/* main */
+.home-container .text,
+.home-container .image{
+    vertical-align: middle;
+    min-height: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.home-container .text{
+    width: 74%;
+}
+
+.home-container .text.left{
+    padding-right: 2rem;
+}
+
+.home-container .text.right{
+    left: 2rem;
+}
+
+.home-container .image{
+    width: 24%;
+}
