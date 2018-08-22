@@ -1,10 +1,13 @@
 :root{
+    --black: #000000;
+    --white: #ffffff;
     --purple: #5f2c91;
     --orange: #fa8c65; /*var(--orange)*/
 }
 html{
     width: 100%;
-    background-color : var(--orange);
+    background-color : var(--white);
+    font-size: 14px;
 }
 
 body{
@@ -18,22 +21,55 @@ body{
 }
 
 .top-image img {
-    max-width : 400px;
+    max-width : 15rem;
 }
 
+.title-text{
 
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.menu,
+footer{
+    height: 2.8rem;
+    line-height: 2.8rem;
+    background-color : var(--orange);
+    color: var(--black);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.menu a{
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 0.8rem;
+}
 
 /* main */
+main{
+    margin-top: 1rem;
+}
+
+.home-container{
+    height: 100%;
+    margin: 2rem;
+}
+.home-container.first{
+    margin-top:0;
+}
 .home-container .text,
 .home-container .image{
     vertical-align: middle;
-    min-height: 100px;
     display: inline-block;
     box-sizing: border-box;
 }
 
 .home-container .text{
-    width: 74%;
+    font-size: 1.5rem;
+    width: 59%;
 }
 
 .home-container .text.left{
@@ -45,5 +81,9 @@ body{
 }
 
 .home-container .image{
-    width: 24%;
+    width: 39%;
+}
+
+.home-container .image img{
+    width: 100%;
 }
