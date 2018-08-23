@@ -8,6 +8,7 @@ html{
     width: 100%;
     background-color : var(--white);
     font-size: 14px;
+    font-family: 'Open sans', sans-serif;
 }
 
 body{
@@ -25,32 +26,39 @@ body{
 }
 
 .title-text{
-
     font-size: 1.5rem;
     text-align: center;
+    color: var(--purple);
+    text-transform: uppercase;
 }
 
-.menu,
-footer{
+.menu{
     height: 2.8rem;
     line-height: 2.8rem;
-    background-color : var(--orange);
+    border-top: 1px solid var(--purple);
+    border-bottom: 1px solid var(--purple);
     color: var(--black);
     font-size: 1rem;
     text-align: center;
+    margin-top : 1rem;
 }
 
 .menu a{
     text-decoration: none;
-    color: var(--white);
+    color: var(--purple);
     text-transform: uppercase;
     display: inline-block;
     padding: 0 0.8rem;
 }
 
+.menu a.active{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 /* main */
 main{
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .home-container{
@@ -86,4 +94,63 @@ main{
 
 .home-container .image img{
     width: 100%;
+}
+
+/* teacher page*/
+.teacher-container{
+    height: 100%;
+}
+
+.teacher-text,
+.teacher-image{
+    vertical-align: middle;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.teacher-text{
+    width: 60%;
+}
+
+.teacher-image{
+    width: 39%;
+    min-height: 35rem;
+    background: url('/assets/DSC_0119-2.jpg') calc(100% + 150px) center ;
+}
+
+
+/* saolim page */
+.saolim-image{
+    width: 100%;
+    min-height: 22rem;
+    background: url('/assets/schaolin-873569_1920.jpg') center calc(100% + 200px) ;
+    background-size: cover;
+}
+
+.title{
+    font-size: 2rem;
+}
+.subtitle{
+    font-size: 1.5rem;
+}
+
+
+/* lesson page*/
+.lesson-text,
+.lesson-image{
+    vertical-align: middle;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+
+.lesson-text{
+    width:100%;
+}
+
+.lesson-image{
+    width: 100%;
+    min-height: 25rem;
+    background: url('/assets/01-4.jpg') center calc(100% + 200px) ;
+    background-size: cover;
 }
