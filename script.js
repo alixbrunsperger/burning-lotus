@@ -17,11 +17,11 @@ const getHeader = (path) => (
             <img src="/assets/menu.png" onclick="toggleMenu()"/>
         </section>
         <section class="menu-content">
-            <a class="${ path == "/saolim"? "active" : "" }" href="/saolim">Presentation of the style</a>
-            <a class="${ path == "/lessons"? "active" : "" }" href="/lessons">Lessons</a>
-            <a class="${ path == "/teacher"? "active" : "" }" href="/teacher">Teacher</a>
-            <a class="${ path == "/schedules"? "active" : "" }" href="/schedules">Schedules and location</a>
-            <a class="${ path == "/inscription"? "active" : "" }" href="/inscription">Prices and inscription</a>
+            <a class="${ path == "/saolim.html"? "active" : "" }" href="/saolim.html">Presentation of the style</a>
+            <a class="${ path == "/lessons.html"? "active" : "" }" href="/lessons.html">Lessons</a>
+            <a class="${ path == "/teacher.html"? "active" : "" }" href="/teacher.html">Teacher</a>
+            <a class="${ path == "/schedules.html"? "active" : "" }" href="/schedules.html">Schedules and location</a>
+            <a class="${ path == "/inscription.html"? "active" : "" }" href="/inscription.html">Prices and inscription</a>
         </section>
     </section>`
 );
