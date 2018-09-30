@@ -3,6 +3,7 @@
     --white: #ffffff;
     --purple: #5f2c91; /*95,44,145*/
     --orange: #fa8c65; /*250,140,101*/
+    --lightpurple: rgba(95,44,145, 0.2);
 }
 html{
     width: 100%;
@@ -35,6 +36,14 @@ body{
 .menu-container{
     border-top: 1px solid var(--purple);
     border-bottom: 1px solid var(--purple);
+    position: relative;
+    min-height: 30px;
+}
+
+.menu-icon {
+  position : absolute;
+  top : 0px;
+  left: 0px;
 }
 
 .menu-icon img{
@@ -52,7 +61,6 @@ body{
     color: var(--black);
     font-size: 1rem;
     text-align: center;
-    margin-top : 1rem;
 }
 
 .menu-content a{
@@ -60,7 +68,7 @@ body{
     color: var(--purple);
     text-transform: uppercase;
     display: inline-block;
-    padding: 0 0.8rem;
+    padding: 0 0.2rem;
 }
 .menu-content.active a{
     display: block;
@@ -97,7 +105,7 @@ main{
     grid-area: text;
     font-size: 1.2rem;
     width: 100%;
-    background-color: rgba(95,44,145, 0.2);
+    background-color: var(--lightpurple);
     height: 200px;
     position: relative;
     padding: 0 2rem;
@@ -181,6 +189,7 @@ main{
 
 .teacher-text{
     width: 60%;
+    padding-right : 1rem;
 }
 
 .teacher-image{
@@ -194,7 +203,7 @@ main{
 .saolim-image{
     width: 100%;
     min-height: 22rem;
-    background: url('/assets/schaolin-873569_1920.jpg') center calc(100% + 200px) ;
+    background: url('/assets/schaolin-873569_1920.jpg') left 100% ;
     background-size: cover;
 }
 
@@ -222,10 +231,43 @@ main{
 .lesson-image{
     width: 100%;
     min-height: 25rem;
-    background: url('/assets/01-4.jpg') center calc(100% + 200px) ;
+    background: url('/assets/01-4.jpg') center 100% ;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
+/* schedules page*/
+.schedules-container{
+    height: 100%;
+}
+.schedules-container .mapouter{text-align:right;height:250px;width:250px;margin: auto;}
+.schedules-container .gmap_canvas {overflow:hidden;background:none!important;height:250px;width:250px;}
+
+.schedules-text,
+.schedules-map{
+    vertical-align: middle;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.schedules-text{
+    width: 100%;
+    vertical-align: top;
+}
+
+.schedules-map{
+    width: 100%;
+    text-align : left;
+}
+
+/*  footer  */
+footer{
+  height : 3rem;
+  line-height: 3rem;
+  text-align : center;
+  font-size : 1.5rem;
+  background-color : var(--lightpurple);
+}
 
 /** TABLET MEDIA QUERIES **/
 @media (min-width: 48rem){
@@ -257,6 +299,19 @@ main{
         height: 300px;
         background-size: 100%;
     }
+
+    .schedules-text{
+      width : 39%;
+    }
+    .schedules-map{
+      width : 60%;
+      text-align: center;
+    }
+
+    .lesson-image{
+        background: url('/assets/01-4.jpg') center calc(100% + 150px) ;
+        background-repeat: no-repeat;
+    }
 }
 
 /** DESKTOP MEDIA QUERIES **/
@@ -277,5 +332,14 @@ main{
     }
     .home-container.bottom{
         display: block;
+    }
+
+    .lesson-image{
+        background: url('/assets/01-4.jpg') center calc(100% + 200px) ;
+        background-repeat: no-repeat;
+    }
+
+    .saolim-image{
+        background: url('/assets/schaolin-873569_1920.jpg') left calc(100% + 200px) ;
     }
 }
