@@ -7,10 +7,10 @@ var render = function (template, selector) {
 
 const getHeader = (path) => (
     `<div class="top-image">
-        <a href="/"><img alt="logo burning lotus" src="/assets/lotus-test-3-blanc.png" /></a>
+        <a href="/"><img alt="logo burning lotus" src="/assets/burning-lotus.png" /></a>
     </div>
     <div class="title-text">
-        Kung fu Sao Lim Hood Khar Pai Göteborg
+        <h1>Kung fu Sao Lim Hood Khar Pai Göteborg</h1>
     </div>
     <div class="menu-container">
         <div class="menu-icon active">

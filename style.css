@@ -16,6 +16,9 @@ body{
     width:80%;
     margin: auto;
 }
+h2,h3,h4,h5,h6{
+  margin: 0px 0px;
+}
 
 .top-image {
     margin: auto;
@@ -26,7 +29,7 @@ body{
     max-width : 15rem;
 }
 
-.title-text{
+.title-text h1{
     font-size: 1.5rem;
     text-align: center;
     color: var(--purple);
@@ -178,8 +181,6 @@ main{
 /* teacher page*/
 .teacher-container{
     height: 100%;
-    display : grid;
-    grid-template-columns: 100%;
 }
 
 .teacher-text,
@@ -190,15 +191,14 @@ main{
 }
 
 .teacher-text{
-    grid-row-start: 2;
-    margin-top : 1rem;
+    width: 60%;
+    padding-right : 1rem;
 }
 
 .teacher-image{
-    grid-row-start: 1;
-    min-height: 13rem;
-    background: url(/assets/DSC_0119-2.jpg);
-    background-size: 100%;
+    width: 39%;
+    min-height: 35rem;
+    background: url('/assets/DSC_0119-2.jpg') calc(100% + 150px) center ;
 }
 
 
@@ -245,6 +245,7 @@ main{
 }
 .schedules-container .mapouter{text-align:right;height:250px;width:250px;margin: auto;}
 .schedules-container .gmap_canvas {overflow:hidden;background:none!important;height:250px;width:250px;}
+iframe {border:0px;}
 
 .schedules-text,
 .schedules-map{
@@ -265,15 +266,24 @@ main{
 
 /*  footer  */
 footer{
-  min-height : 2rem;
-  line-height: 2rem;
+  height : 3rem;
+  line-height: 3rem;
   text-align : center;
   font-size : 1.5rem;
   background-color : var(--lightpurple);
 }
 
-footer span{
-    display : block;
+/*  error page*/
+.error-container{
+  margin: auto;
+  text-align: center;
+}
+.error-container a,
+.error-container a:visited{
+  color: var(--purple);
+  text-transform: uppercase;
+  display : inline-block;
+  margin : 1rem;
 }
 
 /** TABLET MEDIA QUERIES **/
@@ -286,9 +296,6 @@ footer span{
         display:block;
         height: 2.8rem;
         margin-top: 0;
-    }
-    .menu-content a{
-        font-size: 0.8rem;
     }
     .home-container .image{
         width: 44%;
@@ -322,11 +329,6 @@ footer span{
         background: url('/assets/01-4.jpg') center calc(100% + 150px) ;
         background-repeat: no-repeat;
     }
-
-    .teacher-image {
-        background: url(/assets/DSC_0119-2.jpg) right 310px;
-        background-size: 100%;
-    }
 }
 
 /** DESKTOP MEDIA QUERIES **/
@@ -357,32 +359,15 @@ footer span{
     .saolim-image{
         background: url('/assets/schaolin-873569_1920.jpg') left calc(100% + 300px) ;
     }
+}
 
-    .teacher-container{
-        height: 100%;
-        display : block;
-        grid-template-columns: 100%;
-    }
-
-    .teacher-text{
-        width: 60%;
-        padding-right : 1rem;
-        margin-top : 0px;
-    }
-
-    .teacher-image{
-        width: 39%;
-        min-height: 35rem;
-        background: url('/assets/DSC_0119-2.jpg') calc(100% + 150px) center ;
-    }
-
-    footer{
-        min-height : 3rem;
-        line-height: 3rem;
-    }
-
-    footer span{
-        display : inline-block;
-        padding : 0.2rem;
-    }
+@media (max-width: 48rem){
+.container {
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  }
 }
