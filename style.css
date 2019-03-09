@@ -87,6 +87,13 @@ main{
     margin: 1rem 0;
 }
 
+.close-message{
+  font-size: 2rem;
+  margin: 4rem 0;
+  text-align:center;
+  width: 100%;
+}
+
 .home-container{
     height: 100%;
     margin: 2rem 0;

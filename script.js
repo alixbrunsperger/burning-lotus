@@ -30,9 +30,12 @@ const getFooter = () => (
     `<span>Contact :  Alix Brunsperger</span><span> - 073 421 66 34</span><span> - alixpro[at]live.fr</span>`
 );
 
-const loadPage = () => {
+const loadPage = shouldRenderItems => {
+  console.log(shouldRenderItems)
+  if(shouldRenderItems){
     render(getHeader(document.location.pathname), "header");
     render(getFooter(), "footer");
+  }
 }
 
 const toggleMenu = () => {
